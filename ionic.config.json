@@ -1,0 +1,15 @@
+{
+  "name": "",
+  "app_id": "",
+  
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "",
+      "proxyUrl": "http://localhost:8100"
+    }
+      ]  ,
+  "type": "ionic-angular"
+}

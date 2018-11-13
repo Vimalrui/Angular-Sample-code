@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar class="toolbar-background">
+    <ion-title >
+     
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+<ion-list>
+    <ion-item class="body-background" style="margin-top:50px;">
+        
+        <a href="{{str_firstUrl}}"><img src={{str_firstImgurl}}></a>
+        <h2 style="font-weight: bold; font-size: 18px; color:bisque" text-wrap>{{str_firstDescription}}</h2> 
+        <p style="text-align:right; font-size: 12px; color:coral" absolute-drag>{{str_publishDate}}</p>        
+    </ion-item>
+    <ion-item class="body-background" *ngFor="let item of items"  (click)="itemClicked($event,item)">
+      <ion-thumbnail  item-left style="width:120px;">
+        <a (click)="openUrl(item)"><img src="{{item.imgurl}}"></a>
+      </ion-thumbnail >
+      
+        <h2 style="font-weight: bold; font-size: 18px; color:bisque" text-wrap>{{item.title}}</h2> <br>
+        <p style="text-align:right; font-size: 12px; color:coral" absolute-drag>{{item.publishDate}}</p> 
+    </ion-item>
+ 
+  </ion-list>
+</ion-content>
